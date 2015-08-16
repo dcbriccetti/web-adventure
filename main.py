@@ -19,7 +19,7 @@ def show_place(newPath):
         session['placeIndex'] = places.index(place)
     return render_template("advent.html", place=place, destinations=transitions[place])
 
-pumpkin = Place('pumpkin', 'Arduino-Powered Pumpkin', audio='135498__compusician__halloween-003-wav-120b.wav')
+pumpkin = Place('pumpkin', 'Arduino-Powered Pumpkin')
 monster = Place('monster', 'Flying Spaghetti Monster')
 camera  = Place('camera',  'Government Spy Camera')
 trail   = Place('trail',   'Mountain Bike Trail')

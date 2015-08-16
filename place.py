@@ -1,5 +1,4 @@
 class Place(object):
-    def __init__(self, path, title, audio=None):
+    def __init__(self, path, title):
         self.path = path
         self.title = title
-        self.audio = audio

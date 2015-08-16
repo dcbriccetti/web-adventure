@@ -3,17 +3,11 @@
 
 <h1>Amazing Adventure Game</h1>
 
-<h2>{{ place.title }}</h2>
-<div>
-    <img src="static/{{ place.title }}.jpg"/>
-</div>
+<h2>You are at: {{ place.title }}</h2>
 
 <h3>Go to:</h3>
 {% for destination in destinations %}
 <a class="btn btn-lg btn-primary" role="button" href="{{ destination.path }}">{{ destination.title }}</a>
 {% endfor %}
-{% if place.audio %}
-<audio src="static/{{ place.audio }}" autoplay></audio>
-{% endif %}
 
 {% endblock %}
