@@ -8,7 +8,21 @@
     <img src="static/{{ place.title }}.jpg"/>
 </div>
 
-<h3>Go to:</h3>
+{% if carryingItems %}
+<h3>Inventory</h3>
+{% for item in carryingItems %}
+<h3><span class="label label-success">{{ item.title }}</span></h3>
+{% endfor %}
+{% endif %}
+
+{% if availableItems %}
+<h3>Available Items</h3>
+{% for item in availableItems %}
+<a class="btn btn-lg btn-primary" role="button" href="getItem/{{ item.shortName }}">{{ item.title }}</a>
+{% endfor %}
+{% endif %}
+
+<h3>Go to</h3>
 {% for destination in destinations %}
 <a class="btn btn-lg btn-primary" role="button" href="{{ destination.path }}">{{ destination.title }}</a>
 {% endfor %}
