@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Amazing Adventure Game</title>
-</head>
-
-<body>
 <h1>Amazing Adventure Game</h1>
 
-<h2>Current place: {{ place.title }}</h2>
-
+<h2>{{ place.title }}</h2>
 <div>
-    <img src="static/{{place.title}}.jpg"/>
+    <img src="static/{{ place.title }}.jpg"/>
 </div>
-<h3>You can go to:</h3>
-<ul>
-    {% for destination in destinations %}
-    <li><a href="{{ destination.path }}">{{ destination.title }}</a></li>
-    {% endfor %}
-</ul>
+
+<h3>Go to:</h3>
+{% for destination in destinations %}
+<a class="btn btn-lg btn-primary" role="button" href="{{ destination.path }}">{{ destination.title }}</a>
+{% endfor %}
 {% if place.audio %}
 <audio src="static/{{ place.audio }}" autoplay></audio>
 {% endif %}
-</body>
 
-</html>
+{% endblock %}
