@@ -12,10 +12,10 @@ def index():
     return redirect(places[STARTING_PLACE_INDEX].path)
 
 @app.route("/<newPath>")
-def show_place(newPath):
+def showPlace(newPath):
     placeIndex = session.get('placeIndex', STARTING_PLACE_INDEX)
     place = places[placeIndex]
-    newDest = places_by_path.get(newPath)
+    newDest = placesByPath.get(newPath)
     if newDest in transitions[place]:
         place = newDest
         session['placeIndex'] = places.index(place)
@@ -44,7 +44,7 @@ camera  = Place('camera',  'Government Spy Camera')
 trail   = Place('trail',   'Mountain Bike Trail')
 
 places = (pumpkin, monster, camera, trail)
-places_by_path = {p.path: p for p in places}
+placesByPath = {p.path: p for p in places}
 
 transitions = {
     pumpkin: (monster,),
