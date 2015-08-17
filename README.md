@@ -3,6 +3,18 @@ An adventure game in a web app, written in Python with Flask.
 
 This project is for a class of [Dave Briccetti’s Young Programmers](www.meetup.com/Young-Programmers/).
 
+## Software
+* [Python](python.org)
+* [Pycharm Community Edition](http://www.jetbrains.com/pycharm/download/)
+* [git](https://git-scm.com/downloads)
+
+## Web Apps
+* What is the Internet?
+* What is the World Wide Web?
+* What is a Web site?
+* What is a Web page?
+* What is a Web app?
+
 ## Python Review (or New)
 * list
 * tuple
