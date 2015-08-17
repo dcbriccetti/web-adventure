@@ -30,7 +30,7 @@ This project is for a class of [Dave Briccetti’s Young Programmers](www.meetup
 * button formatting
 
 ## Flask
-* Running a simple program
-* The several version of web-adventure
-* View functions
+* running a simple program
+* the several versions of web-adventure, provided as git branches
+* view functions
 * templates
