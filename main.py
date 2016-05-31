@@ -5,11 +5,13 @@ from place import Place
 STARTING_PLACE_INDEX = 0
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
     session['placeIndex'] = STARTING_PLACE_INDEX
     session['inventory'] = []
     return redirect(places[STARTING_PLACE_INDEX].path)
+
 
 @app.route("/<newPath>")
 def showPlace(newPath):
@@ -24,6 +26,7 @@ def showPlace(newPath):
     availableItems.sort(key=lambda i: i.title)
     return render_template("advent.html", place=place, destinations=transitions[place],
         carryingItems=carryingItems, availableItems=availableItems)
+
 
 @app.route("/getItem/<item>")
 def getItem(item):
